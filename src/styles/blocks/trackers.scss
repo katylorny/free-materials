@@ -1,3 +1,5 @@
+@import "src/styles/utils/variables";
+
 .trackers {
   border-top: 1px solid rgba(168, 182, 200, 0.3);
   padding: 29px 0 68px;
@@ -18,26 +20,90 @@
 
 .trackers__item {
   width: 465px;
-  height: 315px;
   border-radius: 12px;
-  background-color: black;
+  padding-top: 213px;
+  overflow: hidden;
 }
 
 .trackers__item--water {
-  background-color: red;
+  background-color: #eaedf8;
 }
 
+.trackers__item--habit {
+  background-color: #f0f0f0;
+}
 
-//.trackers__water {
-//  width: 465px;
-//  height: 315px;
-//  background-color: $c-light-blue;
+.trackers__download {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px 28px 30px;
 
-//}
-//
-//.trackers__habit {
-//  width: 465px;
-//  height: 315px;
-//  border-radius: 12px;
-//  background-color: $c-light-blue;
-//}
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.75px;
+  }
+
+  span {
+    font-family: $pt-sans-bold;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.56px;
+  }
+}
+
+.trackers__download--water {
+  background-color: $c-light-blue;
+
+  h3 {
+    color: $c-dark-blue;
+  }
+
+  span {
+    color: $c-blue;
+  }
+}
+
+.trackers__download--habit {
+  background-color: $c-light-rose;
+
+  h3 {
+    color: $c-burgundy;
+  }
+
+  span {
+    color: $c-light-crimson;
+  }
+}
+
+.trackers__download-text {
+  h3 {
+    font-family: $pt-sans-bold;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.75px;
+    margin: 0 0 10px;
+  }
+
+}
+
+.trackers__button {
+  display: block;
+  min-width: 150px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  padding: 14px;
+  color: $c-white;
+  cursor: pointer;
+}
+
+.trackers__button--water {
+  background-color: $c-blue;
+}
+
+.trackers__button--habit {
+  background-color: $c-crimson;
+}

@@ -1,8 +1,8 @@
 extends common/layout
 
-block content
+block content.container
   main.main
-    section.new-season.container
+    section.new-season
       .new-season__content
         h3 New season
         p 17 july – 1 august
@@ -15,4 +15,17 @@ block content
       h2 Free trackers
       .trackers__list
         .trackers__item--water.trackers__item
+          .trackers__download.trackers__download--water
+            .trackers__download-text
+              h3 Water tracker
+              span free for you
+            a.trackers__button.trackers__button--water(href="#") Download
+
         .trackers__item.trackers__item--habit
+          .trackers__download.trackers__download--habit
+            .trackers__download-text
+              h3 Habit tracker
+              span free for you
+            a.trackers__button.trackers__button--habit(href="#") Download
+
+
