@@ -11,21 +11,33 @@
   }
 }
 
-.trackers__download {
+.trackers__list {
   display: flex;
   justify-content: space-between;
 }
 
-.trackers__water {
+.trackers__item {
   width: 465px;
   height: 315px;
-  background-color: $c-light-blue;
   border-radius: 12px;
+  background-color: black;
 }
 
-.trackers__habit {
-  width: 465px;
-  height: 315px;
-  background-color: $c-light-rose;
-  border-radius: 12px;
+.trackers__item--water {
+  background-color: red;
 }
+
+
+//.trackers__water {
+//  width: 465px;
+//  height: 315px;
+//  background-color: $c-light-blue;
+
+//}
+//
+//.trackers__habit {
+//  width: 465px;
+//  height: 315px;
+//  border-radius: 12px;
+//  background-color: $c-light-blue;
+//}
