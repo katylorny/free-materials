@@ -1,0 +1,25 @@
+//// Файл для подключения нестандартных шрифтов
+
+@font-face {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/pt-sans-bold.woff2") format("woff2"), url("../fonts/pt-sans-bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans Caption";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/pt-sans-caption.woff2") format("woff2"), url("../fonts/pt-sans-caption.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo Extra Bold";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/exo-extra-bold.woff2") format("woff2"), url("../fonts/exo-extra-bold.woff") format("woff");
+  font-display: swap;
+}

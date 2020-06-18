@@ -1,0 +1,55 @@
+@import "src/styles/utils/variables";
+
+.new-season {
+  display: flex;
+  justify-content: space-between;
+  background: $c-light-brown;
+  border-radius: 16px;
+  padding: 28px 40px 18px;
+  margin-bottom: 40px;
+}
+
+.new-season__content {
+  h3 {
+    font-family: $exo-extra-bold;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: normal;
+    color: $c-white;
+    margin: 0 0 10px;
+  }
+
+  p {
+    opacity: 0.5;
+    font-family: $exo-extra-bold;
+    font-size: 22px;
+    font-weight: 800;
+    color: $c-white;
+    margin: 0 0 20px;
+  }
+}
+
+.new-season__img {
+  min-width: 411px;
+}
+
+.new-season__download {
+  display: flex;
+  align-items: center;
+}
+
+.new-season__ios {
+  width: 120px;
+  height: 50px;
+  background: black;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.new-season__download-free {
+  opacity: 0.5;
+  font-family: $pt-sans-bold;
+  font-size: 18px;
+  font-weight: bold;
+  color: $c-white;
+}

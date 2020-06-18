@@ -1,0 +1,37 @@
+@import "../../local_modules/normalize.css/normalize";
+
+@import "src/styles/utils/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $pt-sans-bold;
+  position: relative;
+  //min-width: $mobile-width;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.body-lock {
+  overflow-y: scroll;
+  position: fixed;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
