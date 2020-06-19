@@ -27,6 +27,7 @@
       "px",
       "vh",
       "vm",
+      "ms",
       "vmax",
       "vmin"
     ]

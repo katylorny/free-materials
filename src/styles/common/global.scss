@@ -52,5 +52,5 @@ a {
 }
 
 main {
-  flex: 1;
+  min-height: calc(100vh - 140px - 48px);
 }

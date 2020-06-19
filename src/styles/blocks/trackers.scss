@@ -26,7 +26,6 @@
 }
 
 .trackers__item {
-  width: 465px;
   border-radius: 12px;
   //overflow: hidden;
   position: relative;
@@ -187,6 +186,7 @@
     border-radius: 5px;
     background-color: $c-black;
     opacity: 0.2;
+    transition: all 500ms ease;
   }
 
   .swiper-pagination-bullet-active {
