@@ -3,6 +3,7 @@
   margin-bottom: 26px;
 
   img {
+
     @media (max-width: $tablet-width) {
       width: 174px;
       height: 44px;
@@ -11,7 +12,7 @@
 
   @media (max-width: $tablet-width) {
     padding: 26px 0 12px;
-    margin-bottom: 14px
+    margin-bottom: 14px;
   }
 }
 

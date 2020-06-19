@@ -3,6 +3,10 @@
 .trackers {
   padding: 29px 0 68px;
 
+  @media (max-width: $tablet-width) {
+    padding: 0 0 68px;
+  }
+
   h2 {
     font-family: $exo-extra-bold;
     font-size: 30px;
@@ -24,7 +28,7 @@
 .trackers__item {
   width: 465px;
   border-radius: 12px;
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
 
   &::before {
@@ -34,6 +38,11 @@
     left: 30px;
     width: 81px;
     height: 81px;
+
+    @media (max-width: $tablet-width) {
+      top: -22px;
+      left: calc(50% - 40px);
+    }
   }
 }
 
@@ -52,6 +61,7 @@
 
 .trackers__download-picture {
   height: 213px;
+  border-radius: 12px 12px 0 0;
 }
 
 .trackers__download-picture--water {
@@ -67,6 +77,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px 18px 30px;
+  border-radius: 0 0 12px 12px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
 
   h3 {
     font-size: 24px;
@@ -80,6 +95,22 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: -0.56px;
+  }
+}
+
+.trackers__download-text {
+
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    margin-bottom: 19px;
+  }
+
+  h3 {
+    font-family: $pt-sans-bold;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: -0.75px;
+    margin: 0 0 10px;
   }
 }
 
@@ -107,15 +138,6 @@
   }
 }
 
-.trackers__download-text {
-  h3 {
-    font-family: $pt-sans-bold;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: -0.75px;
-    margin: 0 0 10px;
-  }
-}
 
 .trackers__button {
   display: block;
@@ -126,6 +148,14 @@
   padding: 14px;
   color: $c-white;
   cursor: pointer;
+
+  @media (max-width: $desktop-width) {
+    min-width: 100px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .trackers__button--water {
@@ -134,4 +164,34 @@
 
 .trackers__button--habit {
   background-color: $c-crimson;
+}
+
+.trackers__swiper-container {
+  padding-bottom: 30px;
+  padding-top: 23px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 49px;
+  }
+
+  .swiper-pagination {
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: $c-black;
+    opacity: 0.2;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 35px;
+    height: 8px;
+    opacity: 1;
+  }
 }

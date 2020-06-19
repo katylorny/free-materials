@@ -16,27 +16,27 @@ block content
               img(src="img/banner.png" alt="banner" width="395" height="269")
 
       section.trackers
-        .container.swiper-container
+        .container
           h2 Free trackers
-          .trackers__list.swiper-wrapper
-            .trackers__item.trackers__item--water.swiper-slide
-              .trackers__download-picture.trackers__download-picture--water
-              .trackers__download.trackers__download--water
-                .trackers__download-text
-                  h3 Water tracker
-                  span free for you
-                a.trackers__button.trackers__button--water(href="#") Download
+          .trackers__swiper-container.swiper-container
+            .trackers__list.swiper-wrapper
+              .trackers__item.trackers__item--water.swiper-slide
+                .trackers__download-picture.trackers__download-picture--water
+                .trackers__download.trackers__download--water
+                  .trackers__download-text
+                    h3 Water tracker
+                    span free for you
+                  a.trackers__button.trackers__button--water(href="#") Download
 
-            .trackers__item.trackers__item--habit.swiper-slide
-              .trackers__download-picture.trackers__download-picture--habit
-              .trackers__download.trackers__download--habit
-                .trackers__download-text
-                  h3 Habit tracker
-                  span free for you
-                a.trackers__button.trackers__button--habit(href="#") Download
-
-      .popup
-
+              .trackers__item.trackers__item--habit.swiper-slide
+                .trackers__download-picture.trackers__download-picture--habit
+                .trackers__download.trackers__download--habit
+                  .trackers__download-text
+                    h3 Habit tracker
+                    span free for you
+                  a.trackers__button.trackers__button--habit(href="#") Download
+            .swiper-pagination
+      .popup.popup--closed
         button.popup__close-button(aria-label="Закрыть попап")
           img(src="img/close-button.svg" alt="Кнопка закрытия попапа" width="80" height="80")
         form.popup__form
@@ -47,4 +47,4 @@ block content
           button.popup__button(type="submit") Send
           p By clicking the button, you agree to the processing of personal data.
 
-      .overlay
+      .overlay.overlay--closed
