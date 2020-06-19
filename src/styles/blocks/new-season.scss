@@ -10,7 +10,7 @@
   position: relative;
   padding: 31px 40px 18px;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -18,10 +18,35 @@
     width: 100%;
     background-color: rgba(168, 182, 200, 0.3);
     height: 1px;
+
+    @media (max-width: $tablet-width) {
+      bottom: -18px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 54px 20px 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -15px;
+      width: 100%;
+      background-color: rgba(168, 182, 200, 0.3);
+      height: 1px;
+    }
   }
 }
 
 .new-season__content {
+  display: flex;
+  flex-direction: column;
+
+  //@media (max-width: $tablet-width) {
+  //
+  //}
+
   h3 {
     font-family: $exo-extra-bold;
     font-size: 26px;
@@ -29,6 +54,12 @@
     letter-spacing: normal;
     color: $c-white;
     margin: 0 0 10px;
+
+    @media (max-width: $tablet-width) {
+      font-size: 18px;
+      position: relative;
+      z-index: 2;
+    }
   }
 
   p {
@@ -38,12 +69,20 @@
     font-weight: 800;
     color: $c-white;
     margin: 0 0 20px;
+
+    @media (max-width: $tablet-width) {
+      order: -1;
+      font-size: 12px;
+      margin: 0 0 2px;
+      position: relative;
+      z-index: 2;
+    }
   }
 }
 
 .new-season__img {
   min-width: 411px;
-  position: relative;
+  //position: relative;
   margin-right: -40px;
   margin-bottom: -18px;
 
@@ -51,16 +90,38 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media (max-width: $tablet-width) {
+      width: 221px;
+      height: 152px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: -20px;
+    margin-bottom: -14px;
+    min-width: 159px;
+    height: 56px;
   }
 }
 
 .new-season__download {
   display: flex;
   align-items: center;
+
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+  }
 }
 
 .new-season__ios {
   margin-right: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .new-season__download-free {
@@ -69,4 +130,8 @@
   font-size: 18px;
   font-weight: bold;
   color: $c-white;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }

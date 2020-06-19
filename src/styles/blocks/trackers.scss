@@ -9,6 +9,10 @@
     font-weight: 800;
     color: $c-black;
     margin: 0 7px 30px;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 

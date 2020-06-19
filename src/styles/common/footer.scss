@@ -1,7 +1,10 @@
 @import "../utils/variables";
 
 .footer {
-
+  @media (max-width: $tablet-width) {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .footer__wrapper {
