@@ -1,7 +1,6 @@
 @import "src/styles/utils/variables";
 
 .trackers {
-  border-top: 1px solid rgba(168, 182, 200, 0.3);
   padding: 29px 0 68px;
 
   h2 {
@@ -9,7 +8,7 @@
     font-size: 30px;
     font-weight: 800;
     color: $c-black;
-    margin: 0 0 30px;
+    margin: 0 7px 30px;
   }
 }
 
@@ -21,23 +20,49 @@
 .trackers__item {
   width: 465px;
   border-radius: 12px;
-  padding-top: 213px;
   overflow: hidden;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 30px;
+    width: 81px;
+    height: 81px;
+  }
+}
+
+
+.trackers__item--habit {
+  &::before {
+    background: url("../img/icon-habit.svg") no-repeat 50% 34%;
+  }
 }
 
 .trackers__item--water {
-  background-color: #eaedf8;
+  &::before {
+    background: url("../img/icon-water.svg") no-repeat 50% 34%;
+  }
 }
 
-.trackers__item--habit {
-  background-color: #f0f0f0;
+.trackers__download-picture {
+  height: 213px;
+}
+
+.trackers__download-picture--water {
+  background: #eaedf8 url("../img/water.jpg") no-repeat 50% 50%;
+}
+
+.trackers__download-picture--habit {
+  background: #eaedf8 url("../img/habit.jpg") no-repeat 50% 50%;
 }
 
 .trackers__download {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px 28px 30px;
+  padding: 20px 30px 18px 30px;
 
   h3 {
     font-size: 24px;

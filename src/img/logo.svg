@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="251" height="59" viewBox="0 0 251 59">
+    <g fill="none" fill-rule="evenodd" font-family="SFProDisplay-Black, SF Pro Display" font-weight="700">
+        <text fill="#FE4B05" font-size="36">
+            <tspan x="0" y="34">Free</tspan>
+        </text>
+        <text fill="#000" font-size="15">
+            <tspan x="124.5" y="54.5">FATBURNMANIA</tspan>
+        </text>
+        <text fill="#000" font-size="36">
+            <tspan x="82.5" y="34">materials</tspan>
+        </text>
+        <text fill="#000" font-size="15">
+            <tspan x="102" y="54.5">by</tspan>
+        </text>
+    </g>
+</svg>
