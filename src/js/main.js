@@ -12,17 +12,6 @@ const mySwiper = new Swiper(`.swiper-container`, {
         el: `.swiper-pagination`,
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: `.swiper-button-next`,
-        prevEl: `.swiper-button-prev`,
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-        el: `.swiper-scrollbar`,
-    },
-
     // Responsive breakpoints
     breakpoints: {
     // when window width is >= 320px
@@ -39,6 +28,20 @@ const mySwiper = new Swiper(`.swiper-container`, {
     }
 })
 
+// блокировка скролла
+
+const body = document.querySelector(`body`)
+
+
+function existVerticalScroll() {
+    return document.body.offsetHeight > window.innerHeight
+}
+
+function getBodyScrollTop() {
+    // eslint-disable-next-line no-undef
+    return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop)
+}
+
 // попап
 
 const openPopupButtons = document.querySelectorAll(`.trackers__button`)
@@ -52,17 +55,28 @@ function openPopup() {
     overlay.classList.remove(`overlay--closed`)
     popup.classList.remove(`popup--closed`)
     footer.classList.add(`footer--modal-opened`)
+
+    if (existVerticalScroll()) {
+        body.classList.add(`body-lock`)
+        body.style.top = `-${body.dataset.scrollY}px`
+    }
 }
 
 function closePopup() {
     overlay.classList.add(`overlay--closed`)
     popup.classList.add(`popup--closed`)
     footer.classList.remove(`footer--modal-opened`)
+
+    if (existVerticalScroll()) {
+        body.classList.remove(`body-lock`)
+        window.scrollTo(0, body.dataset.scrollY)
+    }
 }
 
 openPopupButtons.forEach((el) => {
     el.addEventListener(`click`, (evt) => {
         evt.preventDefault()
+        body.dataset.scrollY = getBodyScrollTop()
         openPopup()
 
     })
