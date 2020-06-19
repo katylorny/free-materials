@@ -7,6 +7,14 @@
   }
 }
 
+.footer--modal-opened {
+  @media (max-width: $tablet-width) {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
 .footer__wrapper {
   border-top: 1px solid $c-dark-grey;
   display: flex;
