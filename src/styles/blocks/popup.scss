@@ -1,5 +1,36 @@
 @import "src/styles/utils/variables";
 
+
+
+
+//.popup {
+//  width: 100%;
+//  border-radius: 0;
+//  /* top: 100%; */
+//  bottom: 0;
+//  -webkit-transform: translateY(0) translateX(-50%);
+//  /* transform: translateY(-100%) translateX(-50%); */
+//  padding-bottom: 85px;
+//}
+//
+//.popup {
+//  background: #fff;
+//  width: 435px;
+//  position: fixed;
+//  -webkit-box-orient: vertical;
+//  -webkit-box-direction: normal;
+//  flex-direction: column;
+//  /* top: 50%; */
+//  left: 50%;
+//  -webkit-transform: translate(-50%,-50%);
+//  transform: translate(-50%,-50%);
+//  padding: 30px 50px 13px;
+//  border-radius: 10px;
+//  z-index: 10;
+//  min-width: 320px;
+
+//  -------------------------------
+
 .popup {
   width: 435px;
   position: fixed;
@@ -12,15 +43,15 @@
   border-radius: 10px;
   background-color: $c-white;
   z-index: 10;
-  //display: none;
+  display: none;
   min-width: $mobile-width;
 
   @media (max-width: $tablet-width) {
     width: 100%;
     border-radius: 0;
-    //bottom: 0;
-    top: 100%;
-    transform: translateY(-100%) translateX(-50%);
+    bottom: 0;
+    top: auto;
+    transform: translateY(0) translateX(-50%);
     padding-bottom: 85px;
   }
 
