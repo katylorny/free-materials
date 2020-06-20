@@ -66,7 +66,7 @@ function closePopup() {
     overlay.classList.add(`overlay--closed`)
     popup.classList.add(`popup--closed`)
     footer.classList.remove(`footer--modal-opened`)
-
+    body.style.top = `0`
     if (existVerticalScroll()) {
         body.classList.remove(`body-lock`)
         window.scrollTo(0, body.dataset.scrollY)
