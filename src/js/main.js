@@ -44,7 +44,7 @@ function getBodyScrollTop() {
 
 // попап
 
-const openPopupButtons = document.querySelectorAll(`.trackers__button`)
+const openPopupButtons = Array.prototype.slice.call(document.querySelectorAll(`.trackers__button`))
 const closePopupButton = document.querySelector(`.popup__close-button`)
 const overlay = document.querySelector(`.overlay`)
 const popup = document.querySelector(`.popup`)
@@ -52,14 +52,14 @@ const footer = document.querySelector(`.footer`)
 
 
 function openPopup() {
-    overlay.classList.remove(`overlay--closed`)
-    popup.classList.remove(`popup--closed`)
-    footer.classList.add(`footer--modal-opened`)
-
     if (existVerticalScroll()) {
         body.classList.add(`body-lock`)
         body.style.top = `-${body.dataset.scrollY}px`
     }
+
+    overlay.classList.remove(`overlay--closed`)
+    popup.classList.remove(`popup--closed`)
+    footer.classList.add(`footer--modal-opened`)
 }
 
 function closePopup() {
