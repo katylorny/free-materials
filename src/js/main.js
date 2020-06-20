@@ -30,17 +30,17 @@ const mySwiper = new Swiper(`.swiper-container`, {
 
 // блокировка скролла
 
-// const body = document.querySelector(`body`)
+const body = document.querySelector(`body`)
 
 
-// function existVerticalScroll() {
-//     return document.body.offsetHeight > window.innerHeight
-// }
-//
-// function getBodyScrollTop() {
-//     // eslint-disable-next-line no-undef
-//     return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop)
-// }
+function existVerticalScroll() {
+    return document.body.offsetHeight > window.innerHeight
+}
+
+function getBodyScrollTop() {
+    // eslint-disable-next-line no-undef
+    return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop)
+}
 
 // попап
 
@@ -56,10 +56,10 @@ function openPopup() {
     popup.classList.remove(`popup--closed`)
     footer.classList.add(`footer--modal-opened`)
 
-    // if (existVerticalScroll()) {
-    //     body.classList.add(`body-lock`)
-    //     body.style.top = `-${body.dataset.scrollY}px`
-    // }
+    if (existVerticalScroll()) {
+        body.classList.add(`body-lock`)
+        body.style.top = `-${body.dataset.scrollY}px`
+    }
 }
 
 function closePopup() {
@@ -67,16 +67,16 @@ function closePopup() {
     popup.classList.add(`popup--closed`)
     footer.classList.remove(`footer--modal-opened`)
 
-    // if (existVerticalScroll()) {
-    //     body.classList.remove(`body-lock`)
-    //     window.scrollTo(0, body.dataset.scrollY)
-    // }
+    if (existVerticalScroll()) {
+        body.classList.remove(`body-lock`)
+        window.scrollTo(0, body.dataset.scrollY)
+    }
 }
 
 openPopupButtons.forEach((el) => {
     el.addEventListener(`click`, (evt) => {
         evt.preventDefault()
-        // body.dataset.scrollY = getBodyScrollTop()
+        body.dataset.scrollY = getBodyScrollTop()
         openPopup()
     })
 })
