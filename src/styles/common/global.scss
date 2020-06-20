@@ -53,4 +53,8 @@ a {
 
 main {
   min-height: calc(100vh - 140px - 48px);
+
+  @media (max-width: $tablet-width) {
+    min-height: calc(100vh - 99px - 48px);
+  }
 }
