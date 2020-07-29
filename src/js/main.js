@@ -44,28 +44,38 @@ function getBodyScrollTop() {
 
 // попап
 
-const openPopupButtons = Array.prototype.slice.call(document.querySelectorAll(`.trackers__button`))
-const closePopupButton = document.querySelector(`.popup__close-button`)
+const openPopupButtonWater = document.querySelector(`.trackers__button--water`)
+const openPopupButtonHabit = document.querySelector(`.trackers__button--habit`)
+
+
+const closePopupButtonWater = document.querySelector(`.popup__close-button--water`)
+const closePopupButtonHabit = document.querySelector(`.popup__close-button--habit`)
 const overlay = document.querySelector(`.overlay`)
-const popup = document.querySelector(`.popup`)
+const popupWater = document.querySelector(`.popup--water`)
+const popupHabit = document.querySelector(`.popup--habit`)
 const footer = document.querySelector(`.footer`)
 
 
-function openPopup() {
+function openPopup(popupName) {
     if (existVerticalScroll()) {
         body.classList.add(`body-lock`)
         body.style.top = `-${body.dataset.scrollY}px`
     }
 
     overlay.classList.remove(`overlay--closed`)
-    popup.classList.remove(`popup--closed`)
+    popupName.classList.remove(`popup--closed`)
     footer.classList.add(`footer--modal-opened`)
 }
 
 function closePopup() {
     overlay.classList.add(`overlay--closed`)
-    popup.classList.add(`popup--closed`)
     footer.classList.remove(`footer--modal-opened`)
+
+    const popups = document.querySelectorAll(`.popup`)
+    popups.forEach((item) => {
+        item.classList.add(`popup--closed`)
+    })
+
     body.style.top = `0`
     if (existVerticalScroll()) {
         body.classList.remove(`body-lock`)
@@ -73,24 +83,44 @@ function closePopup() {
     }
 }
 
-openPopupButtons.forEach((el) => {
-    el.addEventListener(`click`, (evt) => {
-        evt.preventDefault()
-        body.dataset.scrollY = getBodyScrollTop()
-        openPopup()
-    })
-})
-closePopupButton.addEventListener(`click`, (evt) => {
+// openPopupButtons.forEach((el) => {
+//     el.addEventListener(`click`, (evt) => {
+//         evt.preventDefault()
+//         body.dataset.scrollY = getBodyScrollTop()
+//         openPopup()
+//     })
+// })
+openPopupButtonWater.addEventListener(`click`, (evt) => {
     evt.preventDefault()
-    closePopup()
+    body.dataset.scrollY = getBodyScrollTop()
+    openPopup(popupWater)
 })
+
+openPopupButtonHabit.addEventListener(`click`, (evt) => {
+    evt.preventDefault()
+    body.dataset.scrollY = getBodyScrollTop()
+    openPopup(popupHabit)
+})
+
+
+closePopupButtonWater.addEventListener(`click`, (evt) => {
+    evt.preventDefault()
+    closePopup(popupWater)
+})
+
+closePopupButtonHabit.addEventListener(`click`, (evt) => {
+    evt.preventDefault()
+    closePopup(popupHabit)
+})
+
 overlay.addEventListener(`click`, (evt) => {
     evt.preventDefault()
+
     closePopup()
 })
 
 document.addEventListener(`keydown`, (evt) => {
-    if (evt.keyCode === 27 && !popup.classList.contains(`popup--closed`)) {
+    if (evt.keyCode === 27) {
         closePopup()
     }
 })
