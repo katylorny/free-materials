@@ -79,14 +79,12 @@
 
 .popup__close-button {
   position: absolute;
-  top: -40px;
-  right: -41px;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+  top: 15px;
+  right: 15px;
   padding: 0;
   border: none;
   cursor: pointer;
+  background: transparent;
 
   @media (max-width: $tablet-width) {
     top: 11px;

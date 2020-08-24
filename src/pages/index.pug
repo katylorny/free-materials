@@ -8,9 +8,11 @@ block content
             .new-season__content
               h3 Free everyday workout
               p 17 july – 1 august
-              a.new-season__download(href="https://apps.apple.com/ru/app/fatburn-mania/id1453006169")
-                .new-season__ios
-                  img(src="img/app-store.png" width="120" height="50" alt="App Store")
+              .new-season__download
+                a.new-season__ios(href="https://apps.apple.com/ru/app/fatburn-mania/id1453006169")
+                  img(src="img/app-store.png" width="84" height="26" alt="App Store")
+                a.new-season__android(href="#")
+                  img(src="img/google-play.png" width="84" height="26" alt="Google Play")
                 span.new-season__download-free Download free
             .new-season__img
               img(src="img/banner.png" alt="banner" width="395" height="269")
@@ -38,7 +40,7 @@ block content
             .swiper-pagination
       .popup.popup--water.popup--closed
         button.popup__close-button.popup__close-button--water(aria-label="Закрыть попап")
-          img(src="img/close-button.svg" alt="Кнопка закрытия попапа" width="80" height="80")
+          img(src="img/icon-close-button.svg" alt="Кнопка закрытия попапа" width="16" height="16")
         form(action='https://app.getresponse.com/add_subscriber.html' accept-charset="utf-8" method='POST' target='_blank').popup__form
           h2 Tell us contact info
           input(type="text" name="name" placeholder="Name")
@@ -50,7 +52,7 @@ block content
           p By clicking the button, you agree to the processing of personal data.
       .popup.popup--habit.popup--closed
         button.popup__close-button.popup__close-button--habit(aria-label="Закрыть попап")
-          img(src="img/close-button.svg" alt="Кнопка закрытия попапа" width="80" height="80")
+          img(src="img/icon-close-button.svg" alt="Кнопка закрытия попапа" width="16" height="16")
         form(action='https://app.getresponse.com/add_subscriber.html' accept-charset="utf-8" method='POST' target='_blank').popup__form
           h2 Tell us contact info
           input(type="text" name="name" placeholder="Name")

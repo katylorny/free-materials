@@ -8,7 +8,7 @@
   margin-bottom: 40px;
   box-shadow: 0 6px 8px $c-shadow;
   position: relative;
-  padding: 31px 40px 18px;
+  padding: 31px 40px 26px;
 
   &::after {
     content: "";
@@ -68,7 +68,7 @@
     font-size: 22px;
     font-weight: 800;
     color: $c-white;
-    margin: 0 0 20px;
+    margin: 0 0 36px;
 
     @media (max-width: $tablet-width) {
       order: -1;
@@ -107,18 +107,19 @@
 
 .new-season__download {
   display: flex;
-  align-items: center;
+  align-items: end;
 
   @media (max-width: $tablet-width) {
     position: absolute;
-    bottom: 2px;
-    right: 4px;
+    bottom: 11px;
+    right: 15px;
     z-index: 1;
+    flex-direction: column;
   }
 }
 
 .new-season__ios {
-  margin-right: 20px;
+  margin-right: 10px;
 
   @media (max-width: $tablet-width) {
     margin-right: 0;
@@ -128,9 +129,10 @@
 .new-season__download-free {
   opacity: 0.5;
   font-family: $pt-sans-bold;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: $c-white;
+  margin-left: 21px;
 
   @media (max-width: $tablet-width) {
     display: none;
