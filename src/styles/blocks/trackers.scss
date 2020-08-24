@@ -64,11 +64,27 @@
 }
 
 .trackers__download-picture--water {
-  background: #eaedf8 url("../img/water.png") no-repeat 50% 50%;
+  background: #eaedf8 url("../img/water.jpg") no-repeat;
+  //background-size: cover;
+  background-position-y: 99%;
+  background-size: 114%;
+
+  @media (max-width: $tablet-width) {
+    background-size: 178%;
+  }
+  //
+  //@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  //  background-image: url("../img/water@2x.jpg");
+  //}
 }
 
 .trackers__download-picture--habit {
-  background: #eaedf8 url("../img/habit.jpg") no-repeat 42% 51%;
+  background: #eaedf8 url("../img/habit.jpg") no-repeat;
+  background-size: cover;
+
+  //@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  //  background-image: url("../img/habit@2x.jpg");
+  //}
 }
 
 .trackers__download {
