@@ -154,7 +154,8 @@
   padding-bottom: 30px;
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 13px;
+    //padding-bottom: 13px;
+    padding-bottom: 85px;
   }
 
   .popup__success {

@@ -121,7 +121,9 @@ buttonDone.addEventListener(`click`, function () {
 popupButtons.forEach((popupButton) => {
     popupButton.addEventListener(`click`, function (evt) {
         evt.preventDefault()
+
         closePopup()
+      // body.dataset.scrollY = getBodyScrollTop()
         openPopup(popupDone)
     })
 })
