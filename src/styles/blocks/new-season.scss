@@ -10,6 +10,10 @@
   position: relative;
   padding: 31px 40px 26px;
 
+  @media (max-width: $tablet-width) {
+    margin-bottom: 9px;
+  }
+
   &::after {
     content: "";
     position: absolute;

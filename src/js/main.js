@@ -48,12 +48,16 @@ const openPopupButtonWater = document.querySelector(`.trackers__button--water`)
 const openPopupButtonHabit = document.querySelector(`.trackers__button--habit`)
 
 
-const closePopupButtonWater = document.querySelector(`.popup__close-button--water`)
-const closePopupButtonHabit = document.querySelector(`.popup__close-button--habit`)
+// const closePopupButtonWater = document.querySelector(`.popup__close-button--water`)
+// const closePopupButtonHabit = document.querySelector(`.popup__close-button--habit`)
+const popupCloseButtons = document.querySelectorAll(`.popup__close-button`)
 const overlay = document.querySelector(`.overlay`)
 const popupWater = document.querySelector(`.popup--water`)
 const popupHabit = document.querySelector(`.popup--habit`)
+const popupDone = document.querySelector(`.popup--done`)
 const footer = document.querySelector(`.footer`)
+const popupButtons = document.querySelectorAll(`.popup__button`)
+const buttonDone = document.querySelector(`.popup__done-button`)
 
 
 function openPopup(popupName) {
@@ -103,15 +107,34 @@ openPopupButtonHabit.addEventListener(`click`, (evt) => {
 })
 
 
-closePopupButtonWater.addEventListener(`click`, (evt) => {
-    evt.preventDefault()
-    closePopup(popupWater)
+popupCloseButtons.forEach((closeButton) => {
+    closeButton.addEventListener(`click`, (evt) => {
+        evt.preventDefault()
+        closePopup()
+    })
 })
 
-closePopupButtonHabit.addEventListener(`click`, (evt) => {
-    evt.preventDefault()
-    closePopup(popupHabit)
+buttonDone.addEventListener(`click`, function () {
+    closePopup()
 })
+
+popupButtons.forEach((popupButton) => {
+    popupButton.addEventListener(`click`, function (evt) {
+        evt.preventDefault()
+        closePopup()
+        openPopup(popupDone)
+    })
+})
+
+// closePopupButtonWater.addEventListener(`click`, (evt) => {
+//     evt.preventDefault()
+//     closePopup(popupWater)
+// })
+//
+// closePopupButtonHabit.addEventListener(`click`, (evt) => {
+//     evt.preventDefault()
+//     closePopup(popupHabit)
+// })
 
 overlay.addEventListener(`click`, (evt) => {
     evt.preventDefault()

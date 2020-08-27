@@ -39,7 +39,7 @@ block content
                   a.trackers__button.trackers__button--habit(href="#") Download
             .swiper-pagination
       .popup.popup--water.popup--closed
-        button.popup__close-button.popup__close-button--water(aria-label="Закрыть попап")
+        button.popup__close-button(aria-label="Закрыть попап")
           img(src="img/icon-close-button.svg" alt="Кнопка закрытия попапа" width="16" height="16")
         form(action='https://app.getresponse.com/add_subscriber.html' accept-charset="utf-8" method='POST' target='_blank').popup__form
           h2 Tell us contact info
@@ -51,7 +51,7 @@ block content
           button.popup__button(type="submit" name="subscribe" value='Subscribe') Send
           p By clicking the button, you agree to the processing of personal data.
       .popup.popup--habit.popup--closed
-        button.popup__close-button.popup__close-button--habit(aria-label="Закрыть попап")
+        button.popup__close-button(aria-label="Закрыть попап")
           img(src="img/icon-close-button.svg" alt="Кнопка закрытия попапа" width="16" height="16")
         form(action='https://app.getresponse.com/add_subscriber.html' accept-charset="utf-8" method='POST' target='_blank').popup__form
           h2 Tell us contact info
@@ -62,5 +62,13 @@ block content
           input(type="hidden" name="start_day" value="0")
           button.popup__button(type="submit" name="subscribe" value='Subscribe') Send
           p By clicking the button, you agree to the processing of personal data.
+      .popup.popup--done.popup--closed
+        button.popup__close-button.popup__close-button--habit(type="button" aria-label="Закрыть попап")
+          img(src="img/icon-close-button.svg" alt="Кнопка закрытия попапа" width="16" height="16")
+        img.popup__icon-done(src="img/icon-done.svg" width="147" height="160")
+        h2 Yeah!
+        p.popup__success Your information was sent successfully
+        button.popup__done-button(type="button") Close
+
 
       .overlay.overlay--closed
