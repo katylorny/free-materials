@@ -92,10 +92,15 @@
     border-radius: 5px;
     width: 30px;
     height: 5px;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   &:hover {
     transform: scale(1.05, 1.05);
+
+    @media (max-width: $tablet-width) {
+      transform: none;
+    }
   }
 
   &:focus {
