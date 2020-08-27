@@ -78,6 +78,10 @@
   border-color: #e31717;
   background: rgba(255, 0, 0, 0.1);
   color: #e31717;
+
+  &::placeholder {
+    color: #e31717;
+  }
 }
 
 .popup__close-button {
@@ -159,11 +163,13 @@
     opacity: 1;
     text-align: center;
     margin-bottom: 39px;
+    font-family: $sf-pro-display-medium;
   }
 
   h2 {
     margin-bottom: 5px;
     font-size: 20px;
+    font-family: $sf-pro-display-heavy;
   }
 }
 

@@ -23,3 +23,19 @@
   src: url("../fonts/exo-extra-bold.woff2") format("woff2"), url("../fonts/exo-extra-bold.woff") format("woff");
   font-display: swap;
 }
+
+@font-face {
+  font-family: "SFProDisplay-Heavy";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/SFProDisplay-Heavy.woff2") format("woff2"), url("../fonts/SFProDisplay-Heavy.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SFProDisplay-Medium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/SFProDisplay-Medium.woff") format("woff");
+  font-display: swap;
+}
