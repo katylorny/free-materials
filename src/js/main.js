@@ -123,7 +123,7 @@ popupButtons.forEach((popupButton) => {
         evt.preventDefault()
 
         closePopup()
-      // body.dataset.scrollY = getBodyScrollTop()
+        // body.dataset.scrollY = getBodyScrollTop()
         openPopup(popupDone)
     })
 })
