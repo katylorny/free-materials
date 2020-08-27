@@ -74,6 +74,12 @@
   }
 }
 
+.popup__form input.error {
+  border-color: #e31717;
+  background: rgba(255, 0, 0, 0.1);
+  color: #e31717;
+}
+
 .popup__close-button {
   position: absolute;
   top: 15px;
