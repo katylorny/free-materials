@@ -2,6 +2,8 @@
 
 @import "node_modules/swiper/css/swiper";
 
+@import "node_modules/intl-tel-input/src/css/intlTelInput";
+
 @import "common/global";
 
 @import "common/header";
@@ -16,3 +18,6 @@
 
 @import "blocks/popup";
 
+.iti__flag {
+  background: url("../img/flags.png");
+}

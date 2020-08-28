@@ -59,3 +59,15 @@ main {
     min-height: calc(100vh - 99px - 48px);
   }
 }
+
+.iti__flag {
+  background-image: url("node_modules/intl-tel-input/build/img/flags.png");
+}
+
+.iti {
+  margin-bottom: 14px;
+
+  input {
+    width: 100%;
+  }
+}

@@ -2,6 +2,22 @@
 
 import Swiper from "swiper"
 
+
+import intTelInput from "intl-tel-input"
+
+const inputWater = document.querySelector(`#phone-water`)
+const inputHabit = document.querySelector(`#phone-habit`)
+
+intTelInput(inputWater, {
+    separateDialCode: true
+    // any initialisation options go here
+})
+
+intTelInput(inputHabit, {
+    separateDialCode: true
+    // any initialisation options go here
+})
+
 // const isActive = false
 
 // eslint-disable-next-line no-unused-vars

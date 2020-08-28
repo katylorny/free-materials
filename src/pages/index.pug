@@ -44,8 +44,8 @@ block content
         form(action='https://app.getresponse.com/add_subscriber.html' accept-charset="utf-8" method='POST' target='_blank').popup__form
           h2 Tell us contact info
           input(type="text" name="name" placeholder="Name")
-          input.error(type="text" name="custom_mobile_phone" placeholder="Phone")
-          input(type="email" name="email" placeholder="E-mail")
+          input(type="tel" id="phone-water" name="custom_mobile_phone" placeholder="Phone")
+          input.error(type="email" name="email" placeholder="E-mail")
           input(type="hidden" name="campaign_token" value="B3Uyf")
           input(type="hidden" name="start_day" value="0")
           button.popup__button(type="submit" name="subscribe" value='Subscribe') Send
@@ -56,7 +56,7 @@ block content
         form(action='https://app.getresponse.com/add_subscriber.html' accept-charset="utf-8" method='POST' target='_blank').popup__form
           h2 Tell us contact info
           input(type="text" name="name" placeholder="Name")
-          input(type="text" name="custom_mobile_phone" placeholder="Phone")
+          input(type="text" id="phone-habit" name="custom_mobile_phone" placeholder="Phone")
           input(type="email" name="email" placeholder="E-mail")
           input(type="hidden" name="campaign_token" value="B3UKc")
           input(type="hidden" name="start_day" value="0")
