@@ -67,7 +67,15 @@ main {
 .iti {
   margin-bottom: 14px;
 
-  input {
+  input[type="tel"] {
     width: 100%;
+    font-size: 18px;
+    padding-top: 21px;
+  }
+
+  .iti__selected-dial-code {
+    font-size: 18px;
+    font-family: "Arial", sans-serif;
+    margin-top: 2px;
   }
 }
